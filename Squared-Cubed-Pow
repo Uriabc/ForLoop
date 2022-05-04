@@ -1,0 +1,64 @@
+/*
+ *URI DO
+ *SQUARED & CUBED & POW
+ *May 3, 2022
+*/
+package forloop;
+
+import java.util.Scanner;
+
+public class PowCalculate {
+    public static void main(String[] args) {
+        
+        Scanner input= new Scanner(System.in);
+        int choice =0;
+        
+        System.out.println("Welcome to the exponential calculate");
+        //run the loop until the input is 4
+        while (choice <4) {
+            System.out.println("------------------------------------");
+            System.out.println("                MENU                ");
+            System.out.println("1... Find the value of a number squared");
+            System.out.println("2... Find the value of a number cubed");
+            System.out.println("3... Find the value of a number, to any power");
+            System.out.println("4... Exit");
+            System.out.print("\nYour Choice: ");
+            choice = input.nextInt();
+            System.out.println("\n------------------------------------");
+            //If input is 1, find the squared of the base input
+            if (choice == 1) { 
+                System.out.print("\nEnter the base value: ");
+                int base = input.nextInt();
+                int pow = base;
+                for (int i = 1; i < 2; i++ ) {
+                    base = base * pow;
+                }
+                System.out.println("ANSWER: " + base + "\n");
+            }
+            //If input = 2, find the cubed of the base input
+            else if (choice == 2) {
+                System.out.print("\nEnter the base value: ");
+                int base = input.nextInt();
+                int pow = base;
+                for (int i = 1; i<3; i++) {
+                    base = base*pow;
+                }
+                System.out.print("ANSWER: " + base + "\n");
+            }
+            //If input = 3, run the for loop to calculate the answer of base and pow inputs
+            else if (choice == 3) {
+                System.out.print("\nEnter the base value: ");
+                int base = input.nextInt();
+                int pow = base;
+                System.out.print("\nEnter the power value: ");
+                int power = input.nextInt();
+                for (int i = 1; i < power; i++) {
+                    base = base * pow;
+                }
+                System.out.println("ANSWER: " + base + "\n");
+                
+            }
+        }
+        System.out.println("\nTHANK YOU FOR USING!");
+    }
+}
